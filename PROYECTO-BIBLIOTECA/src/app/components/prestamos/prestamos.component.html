@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prestamos.component.css">
+    <title>Prestamos</title>
+    <style>
+        .input-48 {
+            width: 48%;
+        }
+        .input-45 {
+            width: 45%;
+        }
+        .input-40 {
+            width: 40%;
+        }
+        .btn-enviar {
+            margin-top: 10px;
+        }
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <form (ngSubmit)="hacerPrestamo()"  class="form-register">
+        <h2 class="form_titulo">Registro de Préstamos</h2>
+        <div class="contenedor-input">
+            <input type="text" id="Cedula" name="cedula" placeholder="Cédula" [(ngModel)]="prestamo.cedula" [ngModelOptions]="{ standalone: true }" class="input-100" required>
+            <input type="text" id="Nombres" name="nombres" placeholder="Nombres"[(ngModel)]="prestamo.nombres" [ngModelOptions]="{ standalone: true }" class="input-48" required>
+            <input type="text" id="Cantidad" name="cantidad" placeholder="Cantidad"  [(ngModel)]="prestamo.cantidad" [ngModelOptions]="{ standalone: true }" class="input-48" required>
+            <input type="text" id="Cantidad" name="cantidad" placeholder="libro"  [(ngModel)]="prestamo.libro" [ngModelOptions]="{ standalone: true }" class="input-48" required>
+            <input type="email" id="email" name="correo" placeholder="Correo Electrónico" [(ngModel)]="prestamo.correo" [ngModelOptions]="{ standalone: true }" class="input-100" required>
+            <input type="text" id="Observacion" name="observacion" placeholder="Observación" [(ngModel)]="prestamo.observacion"  [ngModelOptions]="{ standalone: true }" class="input-48" required>
+            <input type="text" id="CodigoLibro" name="codigoLibro" placeholder="Código Libro" [(ngModel)]="prestamo.codigolibro"  [ngModelOptions]="{ standalone: true }" class="input-48" required>
+            <p class="inicio">Fecha de préstamo: <input type="date" [(ngModel)]="prestamo.fechaprestamo" class="input-45"  [ngModelOptions]="{ standalone: true }" required></p>
+            <p class="egreso">Fecha devolución: <input type="date" [(ngModel)]="prestamo.fechadevolucion"  class="input-40" [ngModelOptions]="{ standalone: true }"  required></p>
+            <button type="submit" class="btn-enviar">
+                Prestar
+              </button>
+        </div>
+    </form>
+</div>
+    <input type="text" placeholder="Buscar libros prestados por cedula" [(ngModel)]="cedula" [ngModelOptions]="{standalone: true}" class="input-25" required>
+    <button (click)="buscar()">Buscar</button>
+    <table id="resultsTable">
+        <thead>
+          <tr>
+            <th>Codigo libro</th>
+            <th>Nombres</th>
+            <th>Cedula</th>
+            <th>Libro prestado</th>
+            <th>Fecha de prestamo</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody">
+          <tr *ngFor="let prestar of prestamos ">
+            <td>{{prestar.codigolibro}}</td>
+            <td>{{prestar.nombres}}</td>
+            <td>{{prestar.cedula}}</td>
+            <td>{{prestar.libro}}</td>
+            <td>{{prestar.fechaprestamo}}</td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>

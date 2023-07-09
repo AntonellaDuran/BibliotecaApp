@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ayuda y Contacto</title>
+    <link rel="stylesheet" href="contacto.component.css" />
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Informacion Contacto</h3>
+          <p class="text">
+            Requisito para ingresar a las instalaciones de la Biblioteca es el carnet digital institucional de ULEAM, y si eres invitado: presenta tu cédula y llena los campos de la carta de compromiso.
+
+            Si visitas regularmente la biblioteca se emitirá un carnet digital de invitado temporal para ti.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <i class="fa-solid fa-map-marker"></i>
+              <p>Dirección: Av. Circunvalación - Vía a San Mateo
+                Manta - Manabí - Ecuador</p>
+            </div>
+            <div class="information">
+              <i class="fa-solid fa-envelope-open"></i>
+              <p>Biblioteca@uleam.com</p>
+            </div>
+            <div class="information">
+              <i class="fa-solid fa-volume-control-phone"></i>
+              <p>0998612386-0965223619</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Contactate :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          
+          <form method="post" class="contact-form">
+            <h3 class="title">Solicitud de Ayuda</h3>
+            <div class="input-container">
+              <input type="text" id="Nombres" name="name" placeholder=Nombres class="input"
+              [(ngModel)]="ayuda.nombres" [ngModelOptions]="{standalone: true}"  />
+              <span>Nombres</span>
+            </div>
+            <div class="input-container">
+              <input type="email" id="Correo Institucional" name="email" placeholder="Correo Institucional" class="input" 
+              [(ngModel)]="ayuda.correoinstitucional" [ngModelOptions]="{standalone: true}" />
+              <span>Correo Institucional</span>
+            </div>
+            <div class="input-container">
+              <input type="text"id="Asunto" name="asunto" placeholder="Asunto" class="input"
+              [(ngModel)]="ayuda.asunto" [ngModelOptions]="{standalone: true}"  />
+              <span>Asunto</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" id= "Mensaje" placeholder="Mensaje" class="input"
+              [(ngModel)]="ayuda.mensaje" [ngModelOptions]="{standalone: true}" ></textarea>
+              <span>Mensaje</span>
+            </div>
+            <input type="submit" value="Enviar Solicitud" class="btn" (click)="crearSolicitud()"/>
+            <button (click)="getSolicitudes()" class="btn">Ver solicitudes enviadas por estudiantes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <h1>Solicitudes enviadas por estudiantes</h1>
+
+    <table id="tabla_libros">
+      <thead>
+          <tr>
+              <th>Estudiante</th>
+              <th>Correo institucional</th>
+              <th>Asunto</th>
+              <th>Mensaje</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let sol of solicitudes">
+              <td>{{sol.nombres}}</td>
+              <td>{{sol.correoinstitucional}}</td>
+              <td>{{sol.asunto}}</td>
+              <td>{{sol.mensaje}}</td>
+          </tr>
+      </tbody>
+  </table>
+
+    <script src="../../../assets/js/Contacto.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image:url("../../../assets/img/Uleam2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    justify-content: center;
+}
+
+.form-regis {
+    margin-top: 120px;
+    background-color:rgb(253, 219, 190);
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.form-regis h1::after{
+    font-size: 30px;
+    margin-bottom: 6opx;
+    color:black;
+}
+
+.input-field{
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    background-color:rgb(255, 243, 221);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: none;
+    padding: 18px 15px;
+    color:darkblue;
+
+}
+input::placeholder{
+    color:rgba(0, 0, 0, 0.925);
+}
+.input-field i{
+    margin-left: 15px;
+    color:rgba(0, 0, 0, 0.863);
+    
+}
+form p {
+    color:midnightblue;
+    text-align: left;
+    font-size: 15px;
+}
+form p a{
+    color:crimson;
+    margin-left: 8px;
+
+}
+.btn-field{
+    width: 100px;
+    display: flex;
+    
+}
+.btn-field button{
+    padding: 5px 10px 10px;
+    font-size:20px;
+    background-color: rgb(62, 50, 241);
+    color:aliceblue;
+    height: 40px;
+    border-radius: 10px;
+    border:rgba(0, 0, 0, 0.767);
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+    
+}
+.input-group{
+    height: 500px;
+   
+}

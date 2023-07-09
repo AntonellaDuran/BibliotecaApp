@@ -1,0 +1,114 @@
+form {
+	text-align: center;
+}
+
+input[type="text"] {
+	padding: 10px;
+	margin: 10px;
+}
+body{
+background-image: url("../../../assets/img/Pres.jpg");
+background-size: cover;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+button {
+	padding: 10px;
+	background-color: #af4caf;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.title{
+    color: rgb(7, 19, 10);
+}
+
+
+button:hover {
+	background-color: #8e3e8e;
+}
+
+table {
+	border-collapse: collapse;
+	width: 80%;
+    background: #f2f2f2;
+	margin: 0 auto;
+    border-color: black;
+}
+
+th, td {
+	text-align: center;
+	padding: 10px;
+}
+
+th {
+	background-color: #ffae35;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #ddd;
+}
+
+h1 {
+	text-align: center;
+   
+    
+}
+
+form {
+	text-align: center;
+}
+
+input[type="text"] {
+	padding: 10px;
+	margin: 10px;
+}
+
+button {
+	padding: 10px;
+	background-color: #c946c9;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #a33db8;
+}
+
+table {
+	border-collapse: collapse;
+	width: 80%;
+	margin: 0 auto;
+}
+
+th, td {
+	text-align: center;
+	padding: 10px;
+}
+
+th {
+	background-color: #f859a3;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #ddd;
+}
+
+h1 {
+	text-align: center;
+}

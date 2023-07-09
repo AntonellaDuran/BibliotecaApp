@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Consulta de Libro</title>
+        <link rel="stylesheet" type="text/css" href="consultar-repertorio.component.css">
+    </head> 
+    <body>
+        <h1 class="title">CONSULTA LIBROS FISICOS/DIGITALES</h1>
+        <form>
+            <label for="id_libro">Titulo del Libro:</label>
+            <input type="text" id="id_libro" name="id_libro" [(ngModel)]="titulo" placeholder="Buscar por titulo" 
+            [ngModelOptions]="{standalone: true}"
+             required>
+            <button type="button" (click)="buscar()">Consultar</button>
+    
+        </form>
+        
+        <table id="tabla_libros">
+            <thead>
+                <tr>
+                    <th>Codigo de Libro</th>
+                    <th>Titulo</th>
+                    <th>Estado</th>
+                    <th>Fecha edicion</th>
+                    <th>Categoria</th>
+                    <th>Lectura</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of libros">
+                    <td>{{book.codigolibro}}</td>
+                    <td>{{book.titulo}}</td>
+                    <td>{{book.estado}}</td>
+                    <td>{{book.fechaedicion}}</td>
+                    <td>{{book.categoria}}</td>
+                    <td><a href="{{book.url}}" target="_blank"><img src="./assets/read.png" height="20px" alt=""></a></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <script type="text/javascript" src="../../../assets/js/Consult.js"></script>
+    </body>
+    </html>

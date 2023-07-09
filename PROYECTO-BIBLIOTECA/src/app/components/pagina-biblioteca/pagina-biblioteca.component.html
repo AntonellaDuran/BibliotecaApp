@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal-Biblioteca</title>
+    <link rel="stylesheet" href="pagina-biblioteca.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <nav> 
+            <ul> 
+                <li class="designer"></li>
+                <li>
+                    <a href="../pagina-biblioteca">
+                        <i class="fa-solid fa-home"></i>  
+                        INICIO 
+                    </a> 
+                </li>
+                <li>
+                    <a href="../inicio">
+                        <i class="fa-solid fa-user"></i>  
+                        LOGIN
+                    </a> 
+                </li>
+                <li>
+                    <a href="../registro">
+                        <i class="fa-solid fa-user-plus"></i>  
+                        REGISTRO STUDENT  
+                    </a> 
+                </li>
+                <li>
+                    <a href="../busqueda-de-material"> 
+                        <i class="fa-solid fa-search"></i>  
+                        Búsqueda Material Bibliográfico
+                    </a> 
+                </li>
+                <li>
+                    <a href="../prestamos/"> 
+                        <i class="fa-solid fa-hourglass-start"></i>  
+                        PRÉSTAMOS 
+                    </a>
+                </li>
+                <li>
+                    <a href="../reporte-de-sanciones"> 
+                        <i class="fa-solid fa-exclamation-triangle"></i>
+                        REPORTE SANCIONES
+                    </a>
+                </li>
+                <li>
+                    <a href="../consultar-repertorio"> 
+                        <i class="fa-solid fa-folder-open"></i>
+                        CONSULTA REPERTORIO 
+                    </a>
+                </li>
+                <li>
+                    <a href="../contacto"> 
+                        <i class="fa-solid fa-question-circle"></i>
+                        AYUDA Y CONTACTO
+                    </a>
+                </li>
+                <li>
+                    <i></i>
+                    <button (click)="cerrarsesion()">Cerrar sesion</button>
+                </li>
+            </ul> 
+        </nav> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBLIOTECA_ULEAM</title>
+    <link rel="stylesheet" href="registro.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="form-regis">
+            <h1 id="title">CREA TU CUENTA DE REGISTRO</h1>
+        <form>
+
+            <div class="input-group">
+
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input  placeholder="Identificacion" formControlNam="identificacion" type="text"
+                      [(ngModel)]="estudiantes.identificacion" [ngModelOptions]="{standalone: true}" required>
+                </div>
+                  <div class="input-field">
+                      <i class="fa-solid fa-user"></i>
+                      <input  placeholder="Nombres" type="text"
+                       [(ngModel)]="estudiantes.nombres" [ngModelOptions]="{standalone: true}" required>
+                  </div>
+
+                  <div class="input-field">
+                      <i class="fa-solid fa-phone"></i>
+                      <input  placeholder="Telefono" type="text" 
+                       [(ngModel)]="estudiantes.telefono" [ngModelOptions]="{standalone: true}"  required>
+                  </div>
+                  <div class="input-field">
+                      <i class="fa-solid fa-user"></i>
+                      <input  placeholder="Carrera" type="text"
+                        [(ngModel)]="estudiantes.carrera" [ngModelOptions]="{standalone: true}" required>
+                  </div>
+
+                  <div class="input-field">
+                      <i class="fa-solid fa-envelope"></i>
+                      <input  placeholder="Correo Institucional" type="email"
+                      [(ngModel)]="estudiantes.correoinstitucional" [ngModelOptions]="{standalone: true}" required>
+                  </div>
+
+                  <div class="input-field">
+                      <i class="fa-solid fa-lock"></i>
+                      <input  placeholder="Contraseña" type="password"
+                        [(ngModel)]="estudiantes.pass" [ngModelOptions]="{standalone: true}">
+                  </div>
+                  <p>¿Ya tienes cuenta? <a href="/inicio">Inicia Sesion</a> </p>
+              </div>
+              <div class="btn-field" style="text-align: center;">
+                <button id="signIn" type="button" (click)="registrar()">REGISTRARSE</button>
+            </div>
+            
+             </form>
+        </div>
+    </div>
+    <p id="error-message"></p>
+    <script src="../../../assets/js/Regis.js"></script>
+</body>        
+</html>

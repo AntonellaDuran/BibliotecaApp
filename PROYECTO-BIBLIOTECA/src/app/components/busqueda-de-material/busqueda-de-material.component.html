@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Búsqueda de Materiales Bibliográficos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="busqueda-de-material.component.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Búsqueda de Materiales Bibliográficos</h1>
+      <form>
+        <select id="materialSelect" >
+          <option value="todos">Todos los materiales</option>
+          <option *ngFor="let mater of materiales" value="{{mater.clasematerial}}">
+            {{mater.clasematerial}}
+          </option>
+        </select>
+        <input type="text" placeholder="Buscar por titulo" [(ngModel)]="titulo" [ngModelOptions]="{standalone: true}">
+        <button (click)="buscar()">Buscar</button>
+      </form>
+      <table id="resultsTable">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Año</th>
+            <th>Editorial</th>
+            <th>Lectura</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody">
+          <tr *ngFor="let mater of materiales ">
+            <td>{{mater.titulo}}</td>
+            <td>{{mater.autor}}</td>
+            <td>{{mater.ano}}</td>
+            <td>{{mater.editorial}}</td>
+            <td><a href="{{mater.url}}" target="_blank"><img src="./assets/read.png" height="20px" alt=""></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="../../../assets/js/script.js"></script>
+  </body>
+</html>
+
